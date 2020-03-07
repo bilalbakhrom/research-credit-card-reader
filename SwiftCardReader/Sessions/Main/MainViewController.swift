@@ -62,7 +62,10 @@ class MainViewController: UIViewController, MainViewInstaller {
     
     @objc private func didChangeCardExpireDate(_ textField: UITextField) {
         guard let expireDate = textField.text?.withoutWhiteSpace.replacingOccurrences(of: "/", with: "") else { return }
-        guard expireDate.count <= 7 else { textField.deleteBackward(); return }
+        guard expireDate.count <= 4 else {
+            textField.deleteBackward()
+            return
+        }
         
         textField.text = expireDate.makeReadableExpireDateForCard
         viewModel.expireDate.value = expireDate

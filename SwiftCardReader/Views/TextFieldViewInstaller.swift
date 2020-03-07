@@ -12,9 +12,7 @@ protocol TextFieldViewInstaller: ViewInstaller {
     typealias Attributes = [NSAttributedString.Key: Any]
     typealias Placeholder = String
     typealias Caption = String
-    
-    var topLine: UIView! {get set}
-    var bottomLine: UIView! {get set}
+
     var captionLabel: UILabel! {get set}
     
     var captionTopAnchor: NSLayoutConstraint! {get set}
@@ -24,13 +22,11 @@ protocol TextFieldViewInstaller: ViewInstaller {
 extension TextFieldViewInstaller  {
     
     func initSubviews() {
-        topLine = UIView()
-        topLine.backgroundColor = .ligthDividerColor
-        topLine.translatesAutoresizingMaskIntoConstraints = false
         
-        bottomLine = UIView()
-        bottomLine.backgroundColor = .ligthDividerColor
-        bottomLine.translatesAutoresizingMaskIntoConstraints = false
+        mainView.layer.borderWidth = 2.0
+        mainView.layer.cornerRadius = 52/2
+        mainView.layer.borderColor = UIColor.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
+        
         
         captionLabel = UILabel()
         captionLabel.font = .systemFont(ofSize: 15, weight: .medium)
@@ -40,8 +36,6 @@ extension TextFieldViewInstaller  {
     }
     
     func embedSubviews() {
-        mainView.addSubview(topLine)
-        mainView.addSubview(bottomLine)
         mainView.addSubview(captionLabel)
     }
     
@@ -50,45 +44,19 @@ extension TextFieldViewInstaller  {
         captionCenterYAnchor = captionLabel.centerYAnchor.constraint(equalTo: mainView.centerYAnchor)
         captionCenterYAnchor.isActive = true
         
-        captionTopAnchor = captionLabel.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: DIM.Header.top)
+        captionTopAnchor = captionLabel.topAnchor.constraint(equalTo: mainView.topAnchor, constant: DIM.Header.top)
         
         NSLayoutConstraint.activate([
-            topLine.topAnchor.constraint(equalTo: mainView.topAnchor),
-            topLine.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: DIM.Line.leading),
-            topLine.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
-            topLine.heightAnchor.constraint(equalToConstant: DIM.Line.height),
-            
-            bottomLine.bottomAnchor.constraint(equalTo: mainView.bottomAnchor),
-            bottomLine.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: DIM.Line.leading),
-            bottomLine.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
-            bottomLine.heightAnchor.constraint(equalToConstant: DIM.Line.height),
-
             captionLabel.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: DIM.Header.leading),
-            captionLabel.trailingAnchor.constraint(greaterThanOrEqualTo: mainView.trailingAnchor, constant: -DIM.Header.trailing),
             captionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
         ])
     }
     
 }
 
-
-// MARK: - Layout sizes
-
-fileprivate struct DIM {
-    
-    struct Line {
-        static let leading: CGFloat = Ratio.compute(percentage: 0.04, accordingTo: .width)
-        static let height: CGFloat = 1.0
-    }
-    
+fileprivate enum DIM {
     struct Header {
-        static let leading: CGFloat = Ratio.compute(percentage: 0.04, accordingTo: .width)
-        static let trailing: CGFloat = Ratio.compute(percentage: 0.04, accordingTo: .width)
-        static let top: CGFloat = Ratio.compute(percentage: 10/812, accordingTo: .height)
-    }
-    
-    struct Eye {
-        static let width: CGFloat = Ratio.compute(percentage: 0.064, accordingTo: .width)
-        static let height: CGFloat = Ratio.compute(percentage: 0.064, accordingTo: .width)
+        static let leading: CGFloat = 20.0
+        static let top: CGFloat = 8.0
     }
 }

@@ -23,8 +23,6 @@ extension TextFieldDelegate {
 
 final class TextField: UITextField, TextFieldViewInstaller {
     
-    var topLine: UIView!
-    var bottomLine: UIView!
     var captionLabel: UILabel!
     var captionTopAnchor: NSLayoutConstraint!
     var captionCenterYAnchor: NSLayoutConstraint!
@@ -59,7 +57,7 @@ final class TextField: UITextField, TextFieldViewInstaller {
     }
     
     override init(frame: CGRect) {
-        let textPadding = Ratio.compute(percentage: 16/375, accordingTo: .width)
+        let textPadding: CGFloat = 20.0
         padding = UIEdgeInsets(top: 0, left: textPadding, bottom: 0, right: textPadding)
         super.init(frame: .zero)
         setupNeeds()
@@ -82,7 +80,7 @@ final class TextField: UITextField, TextFieldViewInstaller {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: Ratio.compute(percentage: 64/812, accordingTo: .height))
+        return CGSize(width: UIView.noIntrinsicMetric, height: 52)
     }
     
     func setupNeeds() {
@@ -102,7 +100,7 @@ final class TextField: UITextField, TextFieldViewInstaller {
     }
     
     func updateHeader() {
-        padding.top = (shouldHideHeader) ? 0 : Ratio.compute(percentage: 22/812, accordingTo: .height)
+        padding.top = (shouldHideHeader) ? 0 : 19.0
         layoutIfNeeded()
         
         captionLabel.isHidden = shouldHideHeader
@@ -111,10 +109,6 @@ final class TextField: UITextField, TextFieldViewInstaller {
         } else {
             placeholder = nil
         }
-    }
-    
-    func hideTopLine() {
-        topLine.isHidden = true
     }
     
     func bind(_ receiver: Dynamic<String>) {
@@ -133,7 +127,7 @@ extension TextField: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldDelegate?.textFieldDidBeginEditing(textField)
-        bottomLine.backgroundColor = .darkDividerColor
+        layer.borderColor = UIColor.buttonBackgroundColor.cgColor
         captionLabel.isHidden = shouldHideHeader
         updateHeader()
         moveHeaderToTop { (_) in }
@@ -141,7 +135,7 @@ extension TextField: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textFieldDelegate?.textFieldDidEndEditing(textField)
-        bottomLine.backgroundColor = .ligthDividerColor
+        layer.borderColor = UIColor.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
         guard shouldHideHeader else { return }
         moveHeaderToCenter { (_) in
             self.updateHeader()

@@ -22,7 +22,8 @@ extension CameraViewInstaller {
         
         dismissButton = UIButton()
         dismissButton.backgroundColor = .white
-        dismissButton.dropShadow(0, 4, 15, .black, 0.16, cornerRadius: DIM.Button.height/2)
+        dismissButton.layer.cornerRadius = DIM.Button.height/2
+        dismissButton.dropShadow(0, 7, 15, .black, 0.2)
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -46,7 +47,9 @@ extension CameraViewInstaller {
     }
     
     func localizeText() {
-        
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 17, weight: .medium), .foregroundColor: UIColor.buttonBackgroundColor]
+        let attributedTitle = NSAttributedString(string: "Cancel", attributes: attributes)
+        dismissButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
 }
