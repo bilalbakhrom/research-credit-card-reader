@@ -9,12 +9,16 @@
 import UIKit
 
 protocol TextFieldViewInstaller: ViewInstaller {
+    typealias Attributes = [NSAttributedString.Key: Any]
+    typealias Placeholder = String
+    typealias Caption = String
+    
     var topLine: UIView! {get set}
     var bottomLine: UIView! {get set}
-    var descriptionLabel: UILabel! {get set}
+    var captionLabel: UILabel! {get set}
     
-    var descriptionLabelTopAnchor: NSLayoutConstraint! {get set}
-    var descriptionLabelCenterYAnchor: NSLayoutConstraint! {get set}
+    var captionTopAnchor: NSLayoutConstraint! {get set}
+    var captionCenterYAnchor: NSLayoutConstraint! {get set}
 }
 
 extension TextFieldViewInstaller  {
@@ -28,25 +32,25 @@ extension TextFieldViewInstaller  {
         bottomLine.backgroundColor = .ligthDividerColor
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
         
-        descriptionLabel = UILabel()
-        descriptionLabel.font = .systemFont(ofSize: 15, weight: .medium)
-        descriptionLabel.textColor = .secondaryColor
-        descriptionLabel.isHidden = true
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        captionLabel = UILabel()
+        captionLabel.font = .systemFont(ofSize: 15, weight: .medium)
+        captionLabel.textColor = .secondaryColor
+        captionLabel.isHidden = true
+        captionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func embedSubviews() {
         mainView.addSubview(topLine)
         mainView.addSubview(bottomLine)
-        mainView.addSubview(descriptionLabel)
+        mainView.addSubview(captionLabel)
     }
     
     func addSubviewsConstraints() {
         
-        descriptionLabelCenterYAnchor = descriptionLabel.centerYAnchor.constraint(equalTo: mainView.centerYAnchor)
-        descriptionLabelCenterYAnchor.isActive = true
+        captionCenterYAnchor = captionLabel.centerYAnchor.constraint(equalTo: mainView.centerYAnchor)
+        captionCenterYAnchor.isActive = true
         
-        descriptionLabelTopAnchor = descriptionLabel.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: DIM.Header.top)
+        captionTopAnchor = captionLabel.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: DIM.Header.top)
         
         NSLayoutConstraint.activate([
             topLine.topAnchor.constraint(equalTo: mainView.topAnchor),
@@ -59,9 +63,9 @@ extension TextFieldViewInstaller  {
             bottomLine.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
             bottomLine.heightAnchor.constraint(equalToConstant: DIM.Line.height),
 
-            descriptionLabel.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: DIM.Header.leading),
-            descriptionLabel.trailingAnchor.constraint(greaterThanOrEqualTo: mainView.trailingAnchor, constant: -DIM.Header.trailing),
-            descriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
+            captionLabel.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: DIM.Header.leading),
+            captionLabel.trailingAnchor.constraint(greaterThanOrEqualTo: mainView.trailingAnchor, constant: -DIM.Header.trailing),
+            captionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
         ])
     }
     

@@ -21,35 +21,31 @@ extension TextFieldDelegate {
 }
 
 
-final  class TextField: UITextField, TextFieldViewInstaller {
+final class TextField: UITextField, TextFieldViewInstaller {
     
-    typealias Attributes = [NSAttributedString.Key: Any]
-    typealias Placeholder = String
-    typealias Description = String
+    var topLine: UIView!
+    var bottomLine: UIView!
+    var captionLabel: UILabel!
+    var captionTopAnchor: NSLayoutConstraint!
+    var captionCenterYAnchor: NSLayoutConstraint!
     weak var textFieldDelegate: TextFieldDelegate?
     
-    internal var topLine: UIView!
-    internal var bottomLine: UIView!
-    internal var descriptionLabel: UILabel!
-    internal var descriptionLabelTopAnchor: NSLayoutConstraint!
-    internal var descriptionLabelCenterYAnchor: NSLayoutConstraint!
-    internal var mainView: UIView { self }
-    
-    internal var shouldHideHeader: Bool { !(isFirstResponder || !(text?.isEmpty ?? true)) }
+    var mainView: UIView { self }
+    var shouldHideHeader: Bool {
+        !(isFirstResponder || !(text?.isEmpty ?? true))
+    }
     
     private var padding: UIEdgeInsets
     private var storedPlaceholder: Placeholder = ""
     private var placeholderFont: UIFont = .systemFont(ofSize: 15, weight: .medium)
     private var placeholderColor: UIColor = .secondaryColor
     private var receiver: Dynamic<String>!
-    private var secureButtonLayoutUpdated = false
     
-    var describeText: Description {
+    var caption: Caption {
         get {
-            descriptionLabel.text ?? Description()
-        }
-        set(newDescription) {
-            descriptionLabel.text = newDescription
+            captionLabel.text ?? Caption()
+        } set(newCaption) {
+            captionLabel.text = newCaption
         }
     }
     
@@ -87,7 +83,7 @@ final  class TextField: UITextField, TextFieldViewInstaller {
         return CGSize(width: UIView.noIntrinsicMetric, height: Ratio.compute(percentage: 64/812, accordingTo: .height))
     }
     
-    internal func setupNeeds() {
+    func setupNeeds() {
         setupSubviews()
         delegate = self
         textColor = .primaryTextColor
@@ -105,10 +101,9 @@ final  class TextField: UITextField, TextFieldViewInstaller {
     
     func updateHeader() {
         padding.top = (shouldHideHeader) ? 0 : Ratio.compute(percentage: 22/812, accordingTo: .height)
-        
         layoutIfNeeded()
-        descriptionLabel.isHidden = shouldHideHeader
         
+        captionLabel.isHidden = shouldHideHeader
         if shouldHideHeader {
             set(placeholder: storedPlaceholder, font: placeholderFont, textColor: placeholderColor)
         } else {
@@ -137,7 +132,7 @@ extension TextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldDelegate?.textFieldDidBeginEditing(textField)
         bottomLine.backgroundColor = .darkDividerColor
-        descriptionLabel.isHidden = shouldHideHeader
+        captionLabel.isHidden = shouldHideHeader
         updateHeader()
         moveHeaderToTop { (_) in }
     }
@@ -170,18 +165,18 @@ extension TextField: UITextFieldDelegate {
 extension TextField {
     
     private func moveHeaderToTop(completion: @escaping ((Bool) -> Void)) {
-        descriptionLabelCenterYAnchor.isActive = false
-        descriptionLabelTopAnchor.isActive = true
-        descriptionLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        captionCenterYAnchor.isActive = false
+        captionTopAnchor.isActive = true
+        captionLabel.font = .systemFont(ofSize: 12, weight: .medium)
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
             self.layoutIfNeeded()
         }, completion: completion)
     }
     
     private func moveHeaderToCenter(completion: @escaping ((Bool) -> Void)) {
-        descriptionLabelTopAnchor.isActive = false
-        descriptionLabelCenterYAnchor.isActive = true
-        descriptionLabel.font = .systemFont(ofSize: 15, weight: .medium)
+        captionTopAnchor.isActive = false
+        captionCenterYAnchor.isActive = true
+        captionLabel.font = .systemFont(ofSize: 15, weight: .medium)
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
             self.layoutIfNeeded()
         }, completion: completion)
