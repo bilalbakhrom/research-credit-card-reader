@@ -13,6 +13,14 @@
 		D52CB71F2413D22C00DB8EF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71E2413D22C00DB8EF6 /* MainViewController.swift */; };
 		D52CB7242413D22E00DB8EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52CB7232413D22E00DB8EF6 /* Assets.xcassets */; };
 		D52CB7272413D22E00DB8EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52CB7252413D22E00DB8EF6 /* LaunchScreen.storyboard */; };
+		D5A39C592413DD3A0005C96F /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C582413DD3A0005C96F /* CameraManager.swift */; };
+		D5A39C5B2413DD6F0005C96F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C5A2413DD6F0005C96F /* CameraViewController.swift */; };
+		D5A39C5D2413DD780005C96F /* CameraViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C5C2413DD780005C96F /* CameraViewInstaller.swift */; };
+		D5A39C5F2413DD810005C96F /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C5E2413DD810005C96F /* CameraViewModel.swift */; };
+		D5A39C612413DD910005C96F /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C602413DD910005C96F /* Dynamic.swift */; };
+		D5A39C662413DDDE0005C96F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C652413DDDE0005C96F /* Extensions.swift */; };
+		D5A39C682413DE560005C96F /* Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C672413DE560005C96F /* Ratio.swift */; };
+		D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C692413DED20005C96F /* ViewInstaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		D52CB7232413D22E00DB8EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D52CB7262413D22E00DB8EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D52CB7282413D22E00DB8EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5A39C582413DD3A0005C96F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		D5A39C5A2413DD6F0005C96F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		D5A39C5C2413DD780005C96F /* CameraViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewInstaller.swift; sourceTree = "<group>"; };
+		D5A39C5E2413DD810005C96F /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		D5A39C602413DD910005C96F /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		D5A39C652413DDDE0005C96F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5A39C672413DE560005C96F /* Ratio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratio.swift; sourceTree = "<group>"; };
+		D5A39C692413DED20005C96F /* ViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,7 @@
 			children = (
 				D5A39C562413DBD80005C96F /* Launch */,
 				D5A39C572413DBE90005C96F /* Sessions */,
+				D5A39C622413DDCF0005C96F /* Supporting files */,
 				D5A39C552413DBC00005C96F /* Resources */,
 			);
 			path = SwiftCardReader;
@@ -100,8 +117,31 @@
 			isa = PBXGroup;
 			children = (
 				D52CB71E2413D22C00DB8EF6 /* MainViewController.swift */,
+				D5A39C6B2413E0740005C96F /* Camera */,
 			);
 			path = Sessions;
+			sourceTree = "<group>";
+		};
+		D5A39C622413DDCF0005C96F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D5A39C652413DDDE0005C96F /* Extensions.swift */,
+				D5A39C602413DD910005C96F /* Dynamic.swift */,
+				D5A39C672413DE560005C96F /* Ratio.swift */,
+				D5A39C692413DED20005C96F /* ViewInstaller.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		D5A39C6B2413E0740005C96F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D5A39C5A2413DD6F0005C96F /* CameraViewController.swift */,
+				D5A39C5C2413DD780005C96F /* CameraViewInstaller.swift */,
+				D5A39C5E2413DD810005C96F /* CameraViewModel.swift */,
+				D5A39C582413DD3A0005C96F /* CameraManager.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		E3F1F98E223E0C8C198637FE /* Frameworks */ = {
@@ -245,7 +285,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D52CB71F2413D22C00DB8EF6 /* MainViewController.swift in Sources */,
+				D5A39C5B2413DD6F0005C96F /* CameraViewController.swift in Sources */,
+				D5A39C662413DDDE0005C96F /* Extensions.swift in Sources */,
+				D5A39C5D2413DD780005C96F /* CameraViewInstaller.swift in Sources */,
+				D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */,
 				D52CB71B2413D22C00DB8EF6 /* AppDelegate.swift in Sources */,
+				D5A39C5F2413DD810005C96F /* CameraViewModel.swift in Sources */,
+				D5A39C612413DD910005C96F /* Dynamic.swift in Sources */,
+				D5A39C682413DE560005C96F /* Ratio.swift in Sources */,
+				D5A39C592413DD3A0005C96F /* CameraManager.swift in Sources */,
 				D52CB71D2413D22C00DB8EF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
