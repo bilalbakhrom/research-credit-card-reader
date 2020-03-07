@@ -39,6 +39,9 @@ extension UIView {
         layer.shadowOpacity = 0.0
     }
     
+    func animationZoom(scaleX: CGFloat, y: CGFloat) {
+        transform = CGAffineTransform(scaleX: scaleX, y: y)
+    }
 }
 
 
@@ -185,6 +188,20 @@ extension UIButton {
             titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -spacing)
             imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: spacing / 2)
+        }
+    }
+    
+    func pulseAnimate(completion: @escaping () -> Void) {
+        UIView.animate(withDuration: 0.05, animations: {
+            self.animationZoom(scaleX: 0.95, y: 0.95)
+        }) { (_) in
+            UIView.animate(withDuration: 0.05, animations: {
+                self.transform = .identity
+            }) { (_) in
+                DispatchQueue.main.async {
+                    completion()
+                }
+            }
         }
     }
     

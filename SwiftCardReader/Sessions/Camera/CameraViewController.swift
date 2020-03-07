@@ -22,9 +22,7 @@ extension CameraViewControllerDelegate {
 
 
 class CameraViewController: UIViewController, CameraViewInstaller {
-    
-    override var prefersStatusBarHidden: Bool { true }
-    
+
     var capturePreviewView: UIView!
     var dismissButton: UIButton!
     var cameraManager = CameraManager()
@@ -109,9 +107,11 @@ class CameraViewController: UIViewController, CameraViewInstaller {
     }
     
     @objc private func closeCamera() {
-        delegate?.didTouchDismissButton()
-        cameraManager.stopSession()
-        dismiss(animated: true, completion: nil)
+        dismissButton.pulseAnimate {
+            self.delegate?.didTouchDismissButton()
+            self.cameraManager.stopSession()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // MARK: - Helper methods

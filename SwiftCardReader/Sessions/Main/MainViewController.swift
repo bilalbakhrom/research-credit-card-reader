@@ -72,11 +72,14 @@ class MainViewController: UIViewController, MainViewInstaller {
     }
     
     @objc private func shouldDisplayCamera() {
-        let controller = CameraViewController()
-        controller.delegate = self
-        controller.viewModel = CameraViewModel()
-        controller.modalPresentationStyle = .overFullScreen
-        present(controller, animated: true, completion: nil)
+        scanButton.pulseAnimate {
+            let controller = CameraViewController()
+            controller.delegate = self
+            controller.viewModel = CameraViewModel()
+            controller.modalPresentationStyle = .overFullScreen
+            controller.modalTransitionStyle = .crossDissolve
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }
 
