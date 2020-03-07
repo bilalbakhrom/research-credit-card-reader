@@ -26,6 +26,7 @@
 		D5A39C722413EC110005C96F /* MainViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C712413EC110005C96F /* MainViewInstaller.swift */; };
 		D5A39C742413EC230005C96F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C732413EC230005C96F /* MainViewModel.swift */; };
 		D5A39C772413F8DD0005C96F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */; };
+		D5A39C792414223C0005C96F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D5A39C782414223C0005C96F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		D5A39C712413EC110005C96F /* MainViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInstaller.swift; sourceTree = "<group>"; };
 		D5A39C732413EC230005C96F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5A39C782414223C0005C96F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		D5A39C552413DBC00005C96F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D5A39C782414223C0005C96F /* README.md */,
 				D52CB7232413D22E00DB8EF6 /* Assets.xcassets */,
 				D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */,
 				D52CB7282413D22E00DB8EF6 /* Info.plist */,
@@ -245,6 +248,7 @@
 			files = (
 				D52CB7272413D22E00DB8EF6 /* LaunchScreen.storyboard in Resources */,
 				D52CB7242413D22E00DB8EF6 /* Assets.xcassets in Resources */,
+				D5A39C792414223C0005C96F /* README.md in Resources */,
 				D5A39C772413F8DD0005C96F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
