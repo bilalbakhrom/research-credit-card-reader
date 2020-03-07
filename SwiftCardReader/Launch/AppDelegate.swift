@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             /// - TAG: Will go to SceneDelegate
         } else {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = MainViewController()
+            let controller = MainViewController()
+            controller.viewModel = MainViewModel()
+            window.rootViewController = UINavigationController(rootViewController: controller)
             window.makeKeyAndVisible()
             self.window = window
         }
+        
+        FirebaseApp.configure()
         return true
     }
     

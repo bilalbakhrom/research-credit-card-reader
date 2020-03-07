@@ -52,7 +52,9 @@ final class TextField: UITextField, TextFieldViewInstaller {
     override var text: String? {
         didSet {
             super.text = self.text
+            guard let strongText = text, !strongText.isEmpty else { return }
             updateHeader()
+            moveHeaderToTop { (_) in }
         }
     }
     

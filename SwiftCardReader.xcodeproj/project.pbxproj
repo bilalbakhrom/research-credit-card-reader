@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D258382C904CB48A4FD07E6B /* Pods_SwiftCardReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */; };
+		36F7616BF54C277C3D98B45A /* libPods-SwiftCardReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A05B62FF6ABC9C75AA2D8B /* libPods-SwiftCardReader.a */; };
 		D52CB71B2413D22C00DB8EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71A2413D22C00DB8EF6 /* AppDelegate.swift */; };
 		D52CB71D2413D22C00DB8EF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71C2413D22C00DB8EF6 /* SceneDelegate.swift */; };
 		D52CB71F2413D22C00DB8EF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71E2413D22C00DB8EF6 /* MainViewController.swift */; };
@@ -23,12 +23,15 @@
 		D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C692413DED20005C96F /* ViewInstaller.swift */; };
 		D5A39C6D2413E16D0005C96F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C6C2413E16D0005C96F /* TextField.swift */; };
 		D5A39C702413E1890005C96F /* TextFieldViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C6F2413E1890005C96F /* TextFieldViewInstaller.swift */; };
+		D5A39C722413EC110005C96F /* MainViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C712413EC110005C96F /* MainViewInstaller.swift */; };
+		D5A39C742413EC230005C96F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C732413EC230005C96F /* MainViewModel.swift */; };
+		D5A39C772413F8DD0005C96F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCardReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7122978D7702CAFA5112B9 /* Pods-SwiftCardReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardReader.debug.xcconfig"; path = "Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader.debug.xcconfig"; sourceTree = "<group>"; };
 		3D26A91DBC1ABB4700B0138F /* Pods-SwiftCardReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardReader.release.xcconfig"; path = "Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader.release.xcconfig"; sourceTree = "<group>"; };
+		65A05B62FF6ABC9C75AA2D8B /* libPods-SwiftCardReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftCardReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52CB7172413D22B00DB8EF6 /* SwiftCardReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCardReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52CB71A2413D22C00DB8EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D52CB71C2413D22C00DB8EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		D5A39C692413DED20005C96F /* ViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstaller.swift; sourceTree = "<group>"; };
 		D5A39C6C2413E16D0005C96F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		D5A39C6F2413E1890005C96F /* TextFieldViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewInstaller.swift; sourceTree = "<group>"; };
+		D5A39C712413EC110005C96F /* MainViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInstaller.swift; sourceTree = "<group>"; };
+		D5A39C732413EC230005C96F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D258382C904CB48A4FD07E6B /* Pods_SwiftCardReader.framework in Frameworks */,
+				36F7616BF54C277C3D98B45A /* libPods-SwiftCardReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D52CB7232413D22E00DB8EF6 /* Assets.xcassets */,
+				D5A39C762413F8DD0005C96F /* GoogleService-Info.plist */,
 				D52CB7282413D22E00DB8EF6 /* Info.plist */,
 			);
 			path = Resources;
@@ -121,7 +128,7 @@
 		D5A39C572413DBE90005C96F /* Sessions */ = {
 			isa = PBXGroup;
 			children = (
-				D52CB71E2413D22C00DB8EF6 /* MainViewController.swift */,
+				D5A39C752413EC2A0005C96F /* Main */,
 				D5A39C6B2413E0740005C96F /* Camera */,
 			);
 			path = Sessions;
@@ -158,10 +165,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D5A39C752413EC2A0005C96F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D52CB71E2413D22C00DB8EF6 /* MainViewController.swift */,
+				D5A39C712413EC110005C96F /* MainViewInstaller.swift */,
+				D5A39C732413EC230005C96F /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		E3F1F98E223E0C8C198637FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */,
+				65A05B62FF6ABC9C75AA2D8B /* libPods-SwiftCardReader.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,7 +194,6 @@
 				D52CB7132413D22B00DB8EF6 /* Sources */,
 				D52CB7142413D22B00DB8EF6 /* Frameworks */,
 				D52CB7152413D22B00DB8EF6 /* Resources */,
-				75F51022EF6B550E5B42987C /* [CP] Embed Pods Frameworks */,
 				F7E4CDFA0FE8F1F75741CE9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -229,29 +245,13 @@
 			files = (
 				D52CB7272413D22E00DB8EF6 /* LaunchScreen.storyboard in Resources */,
 				D52CB7242413D22E00DB8EF6 /* Assets.xcassets in Resources */,
+				D5A39C772413F8DD0005C96F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		75F51022EF6B550E5B42987C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9B9AEF71E0186F337397C732 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,7 +303,9 @@
 				D5A39C662413DDDE0005C96F /* Extensions.swift in Sources */,
 				D5A39C6D2413E16D0005C96F /* TextField.swift in Sources */,
 				D5A39C5D2413DD780005C96F /* CameraViewInstaller.swift in Sources */,
+				D5A39C742413EC230005C96F /* MainViewModel.swift in Sources */,
 				D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */,
+				D5A39C722413EC110005C96F /* MainViewInstaller.swift in Sources */,
 				D52CB71B2413D22C00DB8EF6 /* AppDelegate.swift in Sources */,
 				D5A39C702413E1890005C96F /* TextFieldViewInstaller.swift in Sources */,
 				D5A39C5F2413DD810005C96F /* CameraViewModel.swift in Sources */,
@@ -447,6 +449,7 @@
 			baseConfigurationReference = 1C7122978D7702CAFA5112B9 /* Pods-SwiftCardReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNW46HQPWS;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCardReader/Resources/Info.plist";
@@ -458,6 +461,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bilalBakhrom.SwiftCardReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -468,6 +472,7 @@
 			baseConfigurationReference = 3D26A91DBC1ABB4700B0138F /* Pods-SwiftCardReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNW46HQPWS;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCardReader/Resources/Info.plist";
@@ -479,6 +484,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bilalBakhrom.SwiftCardReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
