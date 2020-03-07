@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D258382C904CB48A4FD07E6B /* Pods_SwiftCardReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */; };
 		D52CB71B2413D22C00DB8EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71A2413D22C00DB8EF6 /* AppDelegate.swift */; };
 		D52CB71D2413D22C00DB8EF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71C2413D22C00DB8EF6 /* SceneDelegate.swift */; };
 		D52CB71F2413D22C00DB8EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52CB71E2413D22C00DB8EF6 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCardReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7122978D7702CAFA5112B9 /* Pods-SwiftCardReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardReader.debug.xcconfig"; path = "Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader.debug.xcconfig"; sourceTree = "<group>"; };
+		3D26A91DBC1ABB4700B0138F /* Pods-SwiftCardReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardReader.release.xcconfig"; path = "Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader.release.xcconfig"; sourceTree = "<group>"; };
 		D52CB7172413D22B00DB8EF6 /* SwiftCardReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCardReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52CB71A2413D22C00DB8EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D52CB71C2413D22C00DB8EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D258382C904CB48A4FD07E6B /* Pods_SwiftCardReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7667BA4D9107F7385E670A76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C7122978D7702CAFA5112B9 /* Pods-SwiftCardReader.debug.xcconfig */,
+				3D26A91DBC1ABB4700B0138F /* Pods-SwiftCardReader.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D52CB70E2413D22B00DB8EF6 = {
 			isa = PBXGroup;
 			children = (
 				D52CB7192413D22C00DB8EF6 /* SwiftCardReader */,
 				D52CB7182413D22B00DB8EF6 /* Products */,
+				7667BA4D9107F7385E670A76 /* Pods */,
+				E3F1F98E223E0C8C198637FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = SwiftCardReader;
 			sourceTree = "<group>";
 		};
+		E3F1F98E223E0C8C198637FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AABECAB5C62502931B60BF7 /* Pods_SwiftCardReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D52CB72B2413D22E00DB8EF6 /* Build configuration list for PBXNativeTarget "SwiftCardReader" */;
 			buildPhases = (
+				9B9AEF71E0186F337397C732 /* [CP] Check Pods Manifest.lock */,
 				D52CB7132413D22B00DB8EF6 /* Sources */,
 				D52CB7142413D22B00DB8EF6 /* Frameworks */,
 				D52CB7152413D22B00DB8EF6 /* Resources */,
+				75F51022EF6B550E5B42987C /* [CP] Embed Pods Frameworks */,
+				F7E4CDFA0FE8F1F75741CE9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75F51022EF6B550E5B42987C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B9AEF71E0186F337397C732 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftCardReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7E4CDFA0FE8F1F75741CE9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftCardReader/Pods-SwiftCardReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D52CB7132413D22B00DB8EF6 /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		D52CB72C2413D22E00DB8EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7122978D7702CAFA5112B9 /* Pods-SwiftCardReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +388,7 @@
 		};
 		D52CB72D2413D22E00DB8EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D26A91DBC1ABB4700B0138F /* Pods-SwiftCardReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
