@@ -68,3 +68,39 @@ extension String {
         return formattedExpireDate
     }
 }
+
+
+extension UIColor {
+    
+    @nonobjc class var primaryTextColor: UIColor {
+        UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+    }
+    
+    @nonobjc class var primaryFillColor: UIColor {
+        UIColor.white
+    }
+    
+    @nonobjc class var secondaryColor: UIColor {
+        UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
+    }
+    
+    @nonobjc class var tertiaryColor: UIColor {
+        UIColor(red: 174/255, green: 174/255, blue: 178/255, alpha: 1)
+    }
+    
+    @nonobjc class var buttonBackgroundColor: UIColor {
+        UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+    }
+
+    @nonobjc class var deactiveTextColor: UIColor {
+        UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1)
+    }
+    
+    @nonobjc class var ligthDividerColor: UIColor {
+        UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+    }
+    
+    @nonobjc class var darkDividerColor: UIColor {
+        UIColor(red: 99/255, green: 99/255, blue: 102/255, alpha: 1)
+    }
+}

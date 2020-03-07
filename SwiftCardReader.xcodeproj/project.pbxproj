@@ -21,6 +21,8 @@
 		D5A39C662413DDDE0005C96F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C652413DDDE0005C96F /* Extensions.swift */; };
 		D5A39C682413DE560005C96F /* Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C672413DE560005C96F /* Ratio.swift */; };
 		D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C692413DED20005C96F /* ViewInstaller.swift */; };
+		D5A39C6D2413E16D0005C96F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C6C2413E16D0005C96F /* TextField.swift */; };
+		D5A39C702413E1890005C96F /* TextFieldViewInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A39C6F2413E1890005C96F /* TextFieldViewInstaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D5A39C652413DDDE0005C96F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D5A39C672413DE560005C96F /* Ratio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratio.swift; sourceTree = "<group>"; };
 		D5A39C692413DED20005C96F /* ViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstaller.swift; sourceTree = "<group>"; };
+		D5A39C6C2413E16D0005C96F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		D5A39C6F2413E1890005C96F /* TextFieldViewInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewInstaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			children = (
 				D5A39C562413DBD80005C96F /* Launch */,
 				D5A39C572413DBE90005C96F /* Sessions */,
+				D5A39C6E2413E1720005C96F /* Views */,
 				D5A39C622413DDCF0005C96F /* Supporting files */,
 				D5A39C552413DBC00005C96F /* Resources */,
 			);
@@ -142,6 +147,15 @@
 				D5A39C582413DD3A0005C96F /* CameraManager.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		D5A39C6E2413E1720005C96F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5A39C6C2413E16D0005C96F /* TextField.swift */,
+				D5A39C6F2413E1890005C96F /* TextFieldViewInstaller.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E3F1F98E223E0C8C198637FE /* Frameworks */ = {
@@ -287,9 +301,11 @@
 				D52CB71F2413D22C00DB8EF6 /* MainViewController.swift in Sources */,
 				D5A39C5B2413DD6F0005C96F /* CameraViewController.swift in Sources */,
 				D5A39C662413DDDE0005C96F /* Extensions.swift in Sources */,
+				D5A39C6D2413E16D0005C96F /* TextField.swift in Sources */,
 				D5A39C5D2413DD780005C96F /* CameraViewInstaller.swift in Sources */,
 				D5A39C6A2413DED20005C96F /* ViewInstaller.swift in Sources */,
 				D52CB71B2413D22C00DB8EF6 /* AppDelegate.swift in Sources */,
+				D5A39C702413E1890005C96F /* TextFieldViewInstaller.swift in Sources */,
 				D5A39C5F2413DD810005C96F /* CameraViewModel.swift in Sources */,
 				D5A39C612413DD910005C96F /* Dynamic.swift in Sources */,
 				D5A39C682413DE560005C96F /* Ratio.swift in Sources */,
