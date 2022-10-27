@@ -1,5 +1,5 @@
-# SwiftCardReader-MLKit
-Now using Google ML Kit (using on-device API which is free) and iOS device camera we can scan credit/debit cards' number and expire date
+# Credit/Debit Card Reader 
+We can scan credit/debit card numbers and expiration dates using Google ML Kit (on-device API) and an iOS device camera.
 
 <p float="center" align="center">
     <img src="https://github.com/bilalBakhrom/SwiftCardReader-MLKit/blob/master/SwiftCardReader/Resources/Assets.xcassets/readme-md/scan.dataset/scan.gif" width="250" />
